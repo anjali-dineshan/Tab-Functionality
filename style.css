@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:  sans-serif;
+    background-color: #ccc;
+}
+.tab-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+.tab-container input[type="radio"]
+{
+    display: none;
+}
+.tab-container label
+{
+    padding: 25px;
+   background-color: #e6e1e1;
+   font-weight: 600;
+   cursor: pointer;
+}
+.tab-container .tab
+{
+    background-color: white;
+    padding: 20px;
+    order: 1;   /*flex magic */
+    display: none;
+}
+.tab-container .tab p{
+    font-size: 17px;
+    line-height: 1.5;
+}
+.tab-container input[type="radio"]:checked + label + .tab
+{
+    display: block;
+}
+.tab-container input[type="radio"]:checked + label
+{
+    background-color: white;
+}
